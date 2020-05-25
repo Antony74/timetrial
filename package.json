@@ -1,0 +1,23 @@
+{
+  "name": "timetrial",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "parcel ./src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Antony74/timetrial.git"
+  },
+  "author": "Antony74",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Antony74/timetrial/issues"
+  },
+  "homepage": "https://github.com/Antony74/timetrial#readme",
+  "dependencies": {
+    "parcel": "^1.12.4"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.3"
+  }
+}
