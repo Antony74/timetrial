@@ -65,8 +65,11 @@ const allRaces = (): RaceWithCourse[] => {
   }, []);
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const useRaces = (): any => {
+interface Hook extends Races {
+  allRaces(): RaceWithCourse[];
+}
+
+export const useRaces = (): Hook => {
 
   const [state, setState] = useState({...races});
 
