@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-const Sep: React.FunctionComponent = () => (<span>&nbsp;|&nbsp;</span>)
+const Sep: React.FunctionComponent = () => (<span>&nbsp;|&nbsp;</span>);
 
 const Header: React.FunctionComponent = () => (
   <p align='right'>
@@ -24,5 +24,5 @@ const Header: React.FunctionComponent = () => (
   </p>
 );
 
-export default Header
+export default Header;
 

@@ -2,6 +2,7 @@
   "name": "timetrial",
   "version": "1.0.0",
   "scripts": {
+    "lint": "eslint . --ext .ts --ext .tsx",
     "start": "parcel ./src/index.html"
   },
   "repository": {
@@ -15,12 +16,14 @@
   },
   "homepage": "https://github.com/Antony74/timetrial#readme",
   "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.0.0",
+    "@typescript-eslint/parser": "^3.0.0",
+    "eslint": "^7.1.0",
+    "eslint-plugin-react": "^7.20.0",
     "parcel": "^1.12.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0"
-  },
-  "devDependencies": {
-    "typescript": "^3.9.3"
+    "react-router-dom": "^5.2.0",
+    "typescript": "^3.7.5"
   }
 }
