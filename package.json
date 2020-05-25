@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "lint": "eslint . --ext .ts --ext .tsx",
-    "start": "parcel ./src/index.html"
+    "start": "parcel ./src/index.html ./src/races.xml"
   },
   "repository": {
     "type": "git",
@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/Antony74/timetrial#readme",
   "dependencies": {
+    "@types/xml2js": "^0.4.5",
     "@typescript-eslint/eslint-plugin": "^3.0.0",
     "@typescript-eslint/parser": "^3.0.0",
     "eslint": "^7.1.0",
@@ -24,6 +25,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "xml2js": "^0.4.23"
   }
 }
