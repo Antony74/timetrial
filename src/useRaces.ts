@@ -1,27 +1,34 @@
 import { useState } from 'react';
 import xml2js from 'xml2js';
 
-interface RaceDetail {
+export interface RaceDetail {
   runnername: [string],
   time: [string]
 }
 
-interface Race {
+export interface Race {
   date: string,
   racedetail: RaceDetail[]
 }
 
-interface Season {
+export interface RaceWithCourse extends Race {
+  course: string;
+}
+
+export interface Season {
   course: 'Summer' | 'Winter' | 'alternative Summer',
   race: Race[]
 }
 
-interface Races {
+export interface Races {
   runners: string[];
   season: Season[];
 }
 
-let races: Races = null;
+let races: Races = {
+  runners: [],
+  season: []
+};
 
 const racesPromise = fetch('races.xml').then(response => {
   return response.text();
@@ -52,21 +59,24 @@ const racesPromise = fetch('races.xml').then(response => {
   return races;
 });
 
-export const useRaces = (): Races => {
+const allRaces = (): RaceWithCourse[] => {
+  return races.season.reduce((acc, season) => {
+    return [...acc, ...season.race.map(race => ({...race, course:season.course}))];
+  }, []);
+};
 
-  const [state, setState] = useState({
-    runners: [],
-    season: []
-  });
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const useRaces = (): any => {
 
-  if (races === null) {
+  const [state, setState] = useState({...races});
+
+  if (!allRaces().length) {
     racesPromise.then(() => {
       setState({...races});
     });
   }
 
-  return state;
+  return {...state, allRaces};
 };
 
-export default useRaces;
 
