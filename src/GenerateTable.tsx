@@ -32,7 +32,7 @@ const GenerateTable: React.FunctionComponent = (props: GenerateTableProps) => {
             <div key={season.race[0].date}>
               <li>
                 {`${season.race[0].date} switch to ${season.course}`}
-                <table border="1">
+                <table border="1"><tbody>
                   <tr>
                     <td>&nbsp;</td>
                     {
@@ -58,7 +58,7 @@ const GenerateTable: React.FunctionComponent = (props: GenerateTableProps) => {
                       );
                     })
                   }
-                </table>
+                </tbody></table>
                 <br/>
               </li>
             </div>
