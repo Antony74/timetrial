@@ -4,6 +4,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 
 import Header from './header';
 import GenerateRace from './GenerateRace';
+import Summer from './Summer';
 
 const FrontPage: React.FunctionComponent = () => {
   return (
@@ -37,7 +38,7 @@ const App: React.FunctionComponent = () => {
       <Header></Header>
       <Switch>
         <Route path='/Summer'>
-          Summer!
+          <Summer></Summer>
         </Route>
         <Route path='*'>
           <FrontPage/>

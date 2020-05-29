@@ -15,8 +15,10 @@ export interface RaceWithCourse extends Race {
   course: string;
 }
 
+export type Course = 'Summer' | 'Winter' | 'alternative Summer';
+
 export interface Season {
-  course: 'Summer' | 'Winter' | 'alternative Summer',
+  course: Course,
   race: Race[]
 }
 
