@@ -10,9 +10,9 @@ const GenerateTable: React.FunctionComponent = (course: Course) => {
     <div>
       <h2>Timetrial Results</h2>
       {
-        races.season.filter(
-          (season) => course === null || course === season.course
-        ).map
+//        races.season.filter(
+//          (season) => course === null || course === season.course
+//        ).map
       }
     </div>
   );

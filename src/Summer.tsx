@@ -7,7 +7,7 @@ const Summer: React.FunctionComponent = () => {
     <div>
       <h2>The 3 Mile Summer Course</h2>
       <img src="route.gif"/><br/>
-      <i>Also available to view in Google Earth (if installed): <a href="data/summer.kmz">summer.kmz</a></i>
+      <i>Also available to view in Google Earth (if installed): <a href="summer.kmz">summer.kmz</a></i>
       <p>
       The course starts at the main gate: take a left and run along the main road for a short while,
       then take the first left.  Follow the road around to the right and look out for a footpath on the left.
