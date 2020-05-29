@@ -2,8 +2,8 @@ import { useState } from 'react';
 import xml2js from 'xml2js';
 
 export interface RaceDetail {
-  runnername: [string],
-  time: [string]
+  runnername: string,
+  time: string
 }
 
 export interface Race {
