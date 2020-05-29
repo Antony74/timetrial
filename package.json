@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "lint": "eslint . --ext .ts --ext .tsx",
-    "start": "parcel ./src/index.html ./src/races.xml"
+    "start": "parcel ./src/*.html ./src/*.xml ./src/*.gif"
   },
   "repository": {
     "type": "git",
