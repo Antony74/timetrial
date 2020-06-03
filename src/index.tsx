@@ -5,6 +5,9 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import Header from './header';
 import GenerateRace from './GenerateRace';
 import Summer from './Summer';
+import AltSummer from './AltSummer';
+import Winter from './Winter';
+import All from './All';
 import Race from './Race';
 
 const FrontPage: React.FunctionComponent = () => {
@@ -42,6 +45,15 @@ const App: React.FunctionComponent = () => {
       <Switch>
         <Route path='/Summer'>
           <Summer></Summer>
+        </Route>
+        <Route path='/AltSummer'>
+          <AltSummer></AltSummer>
+        </Route>
+        <Route path='/Winter'>
+          <Winter></Winter>
+        </Route>
+        <Route path='/All'>
+          <All></All>
         </Route>
         <Route path="/Race/:dd/:mm/:yyyy" component={Race}>
         </Route>
