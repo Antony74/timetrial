@@ -1,1 +1,13 @@
-.singleRace td { padding: 5px; }
+.singleRace td {
+  padding: 5px;
+}
+
+.border {
+  border-collapse: collapse;
+}
+
+.border td {
+  border: 1px solid black;
+  padding: 3px;
+}
+

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 import { useRaces, Course } from './useRaces';
 
@@ -6,7 +7,7 @@ interface GenerateTableProps {
   course: Course;
 }
 
-const GenerateTable: React.FunctionComponent = (props: GenerateTableProps) => {
+const GenerateTable: React.FunctionComponent<GenerateTableProps> = (props: GenerateTableProps) => {
 
   const races = useRaces();
 
@@ -32,7 +33,7 @@ const GenerateTable: React.FunctionComponent = (props: GenerateTableProps) => {
             <div key={season.race[0].date}>
               <li>
                 {`${season.race[0].date} switch to ${season.course}`}
-                <table border="1"><tbody>
+                <table className='border'><tbody>
                   <tr>
                     <td>&nbsp;</td>
                     {
@@ -46,7 +47,7 @@ const GenerateTable: React.FunctionComponent = (props: GenerateTableProps) => {
 
                       return (
                         <tr key={race.date}>
-                          <td>{race.date}</td>
+                          <td><Link to={`/Race/${race.date}`}>{race.date}</Link></td>
                           {
                             runners.map((key) =>
                               <td key={key}>

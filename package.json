@@ -16,6 +16,9 @@
   },
   "homepage": "https://github.com/Antony74/timetrial#readme",
   "dependencies": {
+    "@types/react": "^16.9.35",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router-dom": "^5.1.5",
     "@types/xml2js": "^0.4.5",
     "@typescript-eslint/eslint-plugin": "^3.0.0",
     "@typescript-eslint/parser": "^3.0.0",

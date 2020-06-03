@@ -1,19 +1,22 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 import { useRaces } from './useRaces';
 
-const GenerateRace: React.FunctionComponent = () => {
+class GenerateRaceProps {
+  date: string;
+}
+
+const GenerateRace: React.FunctionComponent<GenerateRaceProps> = (props: GenerateRaceProps) => {
 
   const races = useRaces();
   const allRaces = races.allRaces().map((value, index) => ({...value, index}));
-
-  const [state, setState] = React.useState({date: null});
 
   if (!allRaces.length)
     return <div></div>;
 
   const raceIndex = allRaces
-  .filter(someRace => someRace.date === state.date)
+  .filter(someRace => someRace.date === props.date)
   .reduce((_, value) => value.index, allRaces.length - 1);
 
   const race = allRaces[raceIndex];
@@ -32,8 +35,8 @@ const GenerateRace: React.FunctionComponent = () => {
             </tr>
             )),
             <tr key="prevnext">
-              <td>{prevDate ? <a href='#' onClick={() => {setState({date: prevDate});}}>Previous</a>:''}</td>
-              <td>{nextDate ? <a href='#' onClick={() => {setState({date: nextDate});}}>Next</a>:''}</td>
+              <td>{prevDate ? <Link to={`/Race/${prevDate}`}>Previous</Link> : ''}</td>
+              <td>{nextDate ? <Link to={`/Race/${nextDate}`}>Next</Link> : ''}</td>
             </tr>
           ]}
         </tbody>

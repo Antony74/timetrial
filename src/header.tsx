@@ -3,7 +3,7 @@ import * as React from 'react';
 const Sep: React.FunctionComponent = () => (<span>&nbsp;|&nbsp;</span>);
 
 const Header: React.FunctionComponent = () => (
-  <p align='right'>
+  <p style={{textAlign:'right'}}>
     <a href='#'>Home</a>
     <Sep></Sep>
     <a href='#Summer'>Summer&nbsp;Course</a>

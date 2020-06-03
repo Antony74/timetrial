@@ -5,6 +5,7 @@ import { HashRouter, Route, Switch } from 'react-router-dom';
 import Header from './header';
 import GenerateRace from './GenerateRace';
 import Summer from './Summer';
+import Race from './Race';
 
 const FrontPage: React.FunctionComponent = () => {
   return (
@@ -29,7 +30,7 @@ const FrontPage: React.FunctionComponent = () => {
       <br/>
 
       <h2>Most Recent Timetrial</h2>
-      <GenerateRace></GenerateRace>
+      <GenerateRace date={null}></GenerateRace>
   </div>
   );
 };
@@ -41,6 +42,8 @@ const App: React.FunctionComponent = () => {
       <Switch>
         <Route path='/Summer'>
           <Summer></Summer>
+        </Route>
+        <Route path="/Race/:dd/:mm/:yyyy" component={Race}>
         </Route>
         <Route path='*'>
           <FrontPage/>
