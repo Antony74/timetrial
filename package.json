@@ -2,6 +2,8 @@
   "name": "timetrial",
   "version": "1.0.0",
   "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "parcel build ./src/*.html ./src/*.xml ./src/*.gif ./src/*.kmz --no-source-maps",
     "lint": "eslint . --ext .ts --ext .tsx",
     "start": "parcel ./src/*.html ./src/*.xml ./src/*.gif ./src/*.kmz"
   },
@@ -28,6 +30,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
+    "rimraf": "^3.0.2",
     "typescript": "^3.7.5",
     "xml2js": "^0.4.23"
   }
