@@ -1,0 +1,170 @@
+/**
+ * CSS Reset
+ * From Blueprint reset.css
+ * http://blueprintcss.googlecode.com
+ */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0;padding:0;border:0;font-weight:inherit;font-style:inherit;font-size:100%;font-family:inherit;vertical-align:baseline;}
+body {line-height:1.5;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;}
+table, td, th {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:"";}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+
+/**
+ * Basic Typography
+ */
+body {
+    font-family: "Lucida Grande",  Geneva, Lucida, Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    color: #222;
+    background: #fff;
+    margin: 1em 1.5em;
+}
+pre, code {
+    margin: 1.5em 0;
+    white-space: pre;
+}
+pre, code {
+    font: 1em 'andale mono', 'lucida console', monospace;
+    line-height:1.5;
+}
+a[href] {
+    color: #436976;
+    background-color: transparent;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: #003a6b;
+    background-color: transparent;
+    font: 100% 'Lucida Grande', Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding-top: 0.5em;
+}
+h1 {
+    font-size: 130%;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #fcb100;
+}
+h2 {
+    font-size: 120%;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #aaa;
+}
+h3 {
+    font-size: 110%;
+    margin-bottom: 0.5em;
+    text-decoration: underline;
+}
+h4 {
+    font-size: 100%;
+    font-weight: bold;
+}
+h5 {
+    font-size: 100%;
+    font-weight: bold;
+}
+h6 {
+    font-size: 80%;
+}
+li {
+    font-size: 95%;
+    font:Verdana;
+    list-style-type:none;
+
+}
+ul{
+margin-top:0;
+margin-bottom:0;
+}
+/**
+ * Map Examples Specific
+ */
+ 
+.mapDiv 
+{
+ width: 100%;
+ height:95%;
+    float: left;   
+}
+ 
+.mediummap {
+   
+    /*height: 600px;*/
+    /** border: 1px solid #666666; **/
+}
+
+.measureToggle 
+{
+   /* float: left; */
+
+}
+
+#panelRight
+{
+float:left;
+	position:relative;
+	z-index:3000;
+	margin-left:-240px;
+	background-image:url("bck1.png");
+	margin-top:10px;
+	padding-right:0px;
+	padding-bottom:20px;
+	padding-top:20px;
+	width:230px;
+}
+#panelRightTop
+{
+
+height:12px;
+}
+
+#runNavigator
+{
+	margin-left:15px;
+	margin-top:20px;
+
+
+	
+}
+
+#runNavigator label
+{
+	margin-left:10px;
+}
+
+#runNavigator label:hover
+{
+	color:blue;
+	cursor:pointer;
+}
+#test
+{
+float:left;
+position:relative;
+z-index:3000;
+}
+
+.olLayerGoogleCopyright
+{
+display:none;
+}
+
+hr {
+border: 0;
+color: #9E9E9E;
+background-color: #9E9E9E;
+height: 1px;
+width: 85%;
+text-align: left;
+margin-left:35px;
+}
+
+.courseLineCol
+{
+
+    float: left;
+    line-height: 3px;
+    margin-top: 8px;
+    width: 22px;
+}
