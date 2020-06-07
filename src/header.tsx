@@ -13,6 +13,8 @@ const Header: React.FunctionComponent = () => (
     <a href='#Winter'>Winter&nbsp;Course</a>
     <Sep></Sep>
     <a href='#All'>All&nbsp;Races</a>
+    <Sep></Sep>
+    <a href="http://antony74.github.io/timetrial/archive/">Archive</a>
   </p>
 );
 
