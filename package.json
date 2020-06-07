@@ -1,11 +1,14 @@
 {
   "name": "timetrial",
+  "description": "Time trial website, currently on http://wallingfordtimetrial.s3-website.eu-west-2.amazonaws.com/",
   "version": "1.0.0",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "parcel build ./src/*.html ./src/*.xml ./src/*.gif ./src/*.kmz --no-source-maps",
+    "deploy": "npm run build && aws s3 sync ./dist s3://wallingfordtimetrial --exclude races.xml",
     "lint": "eslint . --ext .ts --ext .tsx",
     "serve-archive": "http-server ./archive",
+    "serve-dist": "http-server ./dist",
     "start": "parcel ./src/*.html ./src/*.xml ./src/*.gif ./src/*.kmz"
   },
   "repository": {
