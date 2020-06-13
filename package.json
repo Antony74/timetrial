@@ -5,7 +5,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "parcel build ./src/*.html ./src/*.xml ./src/*.gif ./src/*.kmz --no-source-maps",
-    "deploy": "npm run build && aws s3 sync ./dist s3://wallingfordtimetrial --exclude races.xml",
+    "deploy": "npm run build && aws s3 sync ./dist s3://wallingfordtimetrial.org.uk --exclude races.xml",
     "lint": "eslint . --ext .ts --ext .tsx",
     "serve-archive": "http-server ./archive",
     "serve-dist": "http-server ./dist",
